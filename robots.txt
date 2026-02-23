@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pawankamble04.github.io/my-portfolio-site/sitemap.xml

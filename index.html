@@ -1,593 +1,775 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Kamble | Java Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Pawan Kamble - Java Full Stack Developer (Spring Boot + React).">
+    <meta name="keywords" content="Pawan Kamble, Java Full Stack Developer, Spring Boot, React, MongoDB, MySQL, REST API, portfolio">
+    <meta name="author" content="Pawan Kamble">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09111f">
+    <meta name="application-name" content="Pawan Kamble Portfolio">
+    <link rel="canonical" href="https://pawankamble04.github.io/my-portfolio-site/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    <link rel="icon" type="image/png" href="images/code.png">
+    <link rel="apple-touch-icon" href="images/code.png">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Pawan Kamble | Java Developer Portfolio</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pawan Kamble | Java Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Pawan Kamble with full-stack projects using Spring Boot, React, MongoDB, and MySQL.">
+    <meta property="og:url" content="https://pawankamble04.github.io/my-portfolio-site/">
+    <meta property="og:image" content="https://pawankamble04.github.io/my-portfolio-site/images/sharing.png">
+    <meta property="og:image:alt" content="Pawan Kamble Portfolio">
 
-<meta name="description" content="Portfolio of Pawan Kamble, a passionate Java developer specializing in backend development, REST APIs, and full-stack web projects.">
-<meta name="keywords" content="Pawan Kamble, Java Developer, Spring Boot, React, Full Stack Developer, Backend Developer, Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pawan Kamble | Java Full Stack Developer">
+    <meta name="twitter:description" content="Portfolio of Pawan Kamble with Java full-stack projects and contact details.">
+    <meta name="twitter:image" content="https://pawankamble04.github.io/my-portfolio-site/images/sharing.png">
 
-<meta property="og:title" content="Pawan Kamble | Java Developer">
-<meta property="og:description" content="Explore my projects, skills, and experience in Java, Spring Boot, and React development.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://yourdomain.com/assets/preview.jpg">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pawan Kamble | Java Developer">
-<meta name="twitter:description" content="Portfolio showcasing projects built with Java, Spring Boot, and React.">
-<meta name="twitter:image" content="https://yourdomain.com/assets/preview.jpg">
-
-<link rel="icon" href="assets/favicon.png" type="image/png">
-
-
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'aurora-green': '#00ffaa',
-                        'aurora-blue': '#00aaff',
-                        'aurora-purple': '#aa00ff',
-                        'aurora-pink': '#ff00aa',
-                        'dark-bg': '#0a0e1a',
-                        'dark-card': '#1a1f2e',
-                        'dark-border': '#2a2f3e'
-                    },
-                    animation: {
-                        'aurora': 'aurora 15s ease-in-out infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s ease-in-out infinite',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                        'glow': 'glow 2s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        aurora: {
-                            '0%, 100%': {
-                                backgroundPosition: '0% 50%',
-                                backgroundSize: '200% 200%'
-                            },
-                            '50%': {
-                                backgroundPosition: '100% 50%',
-                                backgroundSize: '200% 200%'
-                            }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        glow: {
-                            '0%, 100%': {
-                                boxShadow: '0 0 5px rgba(0, 255, 170, 0.5), 0 0 20px rgba(0, 255, 170, 0.3)'
-                            },
-                            '50%': {
-                                boxShadow: '0 0 20px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 170, 255, 0.4)'
-                            }
-                        }
-                    }
-                }
-            }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Pawan Kamble",
+            "url": "https://pawankamble04.github.io/my-portfolio-site/",
+            "jobTitle": "Java Full Stack Developer",
+            "email": "pawankamble8078@gmail.com",
+            "telephone": "+91-8432962696",
+            "sameAs": [
+                "https://github.com/pawankamble04",
+                "https://www.linkedin.com/in/pawan-kamble-b94415290/"
+            ]
         }
     </script>
-
-    <style>
-        /* Aurora gradient background */
-        .aurora-bg {
-            background: linear-gradient(-45deg, #0a0e1a, #1a0033, #002244, #001a33);
-            background-size: 400% 400%;
-            animation: aurora 15s ease infinite;
-        }
-
-        /* Aurora light effect overlay */
-        .aurora-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100vh;
-            background:
-                radial-gradient(ellipse at top left, rgba(0, 255, 170, 0.15) 0%, transparent 40%),
-                radial-gradient(ellipse at top right, rgba(0, 170, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(ellipse at bottom left, rgba(170, 0, 255, 0.1) 0%, transparent 40%),
-                radial-gradient(ellipse at bottom right, rgba(255, 0, 170, 0.1) 0%, transparent 40%);
-            pointer-events: none;
-            opacity: 0.7;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0a0e1a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #00ffaa, #00aaff);
-            border-radius: 5px;
-        }
-
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #00ffaa 0%, #00aaff 50%, #aa00ff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Card hover effect */
-        .card-hover {
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .card-hover:hover {
-            border-color: #00ffaa;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 170, 0.2);
-        }
-
-        /* Progress bar animation */
-        @keyframes progressAnimation {
-            0% { width: 0%; }
-        }
-
-        .progress-bar {
-            animation: progressAnimation 2s ease-out forwards;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-dark-bg text-gray-200 aurora-bg">
-    <!-- Aurora overlay effect -->
-    <div class="aurora-overlay"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark-bg/90 backdrop-blur-md border-b border-dark-border z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold gradient-text">PK</div>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="#home" class="hover:text-aurora-green transition">Home</a></li>
-                    <li><a href="#about" class="hover:text-aurora-green transition">About</a></li>
-                    <li><a href="#skills" class="hover:text-aurora-green transition">Skills</a></li>
-                    <li><a href="#portfolio" class="hover:text-aurora-green transition">Portfolio</a></li>
-                    <li><a href="#blog" class="hover:text-aurora-green transition">Blog</a></li>
-                    <li><a href="#contact" class="hover:text-aurora-green transition">Contact</a></li>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand brand fw-bold" href="#home">Pawan Kamble</a>
+            <button class="navbar-toggler text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hire">Hire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-                <!-- Mobile menu button -->
-                <button class="md:hidden" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-            <!-- Mobile menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="#home" class="block py-2 hover:text-aurora-green">Home</a>
-                <a href="#about" class="block py-2 hover:text-aurora-green">About</a>
-                <a href="#skills" class="block py-2 hover:text-aurora-green">Skills</a>
-                <a href="#portfolio" class="block py-2 hover:text-aurora-green">Portfolio</a>
-                <a href="#blog" class="block py-2 hover:text-aurora-green">Blog</a>
-                <a href="#contact" class="block py-2 hover:text-aurora-green">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative">
-        <div class="container mx-auto px-6 text-center z-10">
-            <div class="animate-slide-up">
-                <h1 class="text-5xl md:text-7xl font-bold mb-4">
-                    Hello, I'm <span class="gradient-text">Pawan Kamble </span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-400 mb-8">Full-Stack Developer | Backend Enthusiast  | Full-Stack Learner </p>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">
-                    I’m passionate about building efficient, scalable web applications using Java, Spring Boot, and modern technologies. 
-                    I love solving real-world problems through clean and logical code.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#portfolio" class="px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-full text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
-                        View My Work
-                    </a>
-                    <a href="resume.pdf" class="px-8 py-3 border-2 border-aurora-green rounded-full hover:bg-aurora-green hover:text-dark-bg transition transform hover:scale-105">
-                        Download CV
-                    </a>
-                </div>
-                <div class="mt-12 flex justify-center space-x-6">
-                    <a href="#" class="text-2xl hover:text-aurora-green transition"><i class="fab fa-github"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-blue transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-purple transition"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <p class="fade-up mb-2 text-uppercase" style="letter-spacing: 1.3px; color: var(--muted);">Java Full Stack Developer</p>
+                        <h1 class="fade-up delay-1 display-4 fw-bold">Building reliable products with <span class="gradient-text">Spring Boot + React</span></h1>
+                        <p class="fade-up delay-2 lead mt-3" style="color: var(--muted);">
+                            Hands-on experience in REST API development, full-stack architecture, and database-driven applications.
+                            Focused on clean, scalable code and practical delivery.
+                        </p>
+                        <div class="fade-up delay-3 d-flex flex-wrap gap-2 mt-4">
+                            <a class="btn btn-accent px-4 py-2" href="#projects">View Projects</a>
+                            <a class="btn btn-outline-custom px-4 py-2" href="Pawan_kamble_2026.pdf" download>Download CV</a>
+                            <a class="btn btn-outline-custom px-4 py-2" href="mailto:pawankamble8078@gmail.com">Email Me</a>
+                        </div>
+                        <div class="mt-4">
+                            <span class="pill">Java</span>
+                            <span class="pill">Spring Boot</span>
+                            <span class="pill">React</span>
+                            <span class="pill">JavaScript</span>
+                            <span class="pill">MySQL</span>
+                            <span class="pill">MongoDB</span>
+                            <span class="pill">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <div class="glass p-3 fade-up delay-2">
+                            <img src="images/gif1.gif" class="img-fluid rounded-3" alt="Developer animation">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Animated particles -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute w-2 h-2 bg-aurora-green rounded-full animate-float" style="top: 20%; left: 10%;"></div>
-            <div class="absolute w-2 h-2 bg-aurora-blue rounded-full animate-float" style="top: 60%; left: 80%; animation-delay: 1s;"></div>
-            <div class="absolute w-2 h-2 bg-aurora-purple rounded-full animate-float" style="top: 40%; left: 60%; animation-delay: 2s;"></div>
-            <div class="absolute w-2 h-2 bg-aurora-pink rounded-full animate-float" style="top: 80%; left: 30%; animation-delay: 3s;"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 relative">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <p class="text-gray-400 leading-relaxed">
-                        With a strong passion for Java development and modern software design,
-                         I specialize in building efficient, user-focused applications that combine performance with simplicity.
+        <section id="about" class="section-space">
+            <div class="container">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-8">
+                        <div class="glass p-4 h-100 fade-up">
+                            <h2 class="mb-3">About Me</h2>
+                            <p style="color: var(--muted);">
+                                I am Pawan Kamble, a Computer Science and Engineering student (2026) and Java Full Stack Developer.
+                                I build web applications using Spring Boot and React, with strong focus on backend APIs, database integration,
+                                and maintainable code structure.
+                            </p>
+                            <p class="mb-0" style="color: var(--muted);">
+                                I actively improve my skills through project-based learning and practical implementation of authentication,
+                                role-based access, testing, and end-to-end integration.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row g-3 h-100">
+                            <div class="col-12">
+                                <div class="glass metric-card fade-up delay-1">
+                                    <p class="metric-number gradient-text mb-1">3</p>
+                                    <p class="mb-1 fw-semibold">Core Projects</p>
+                                    <p class="mb-0" style="color: var(--muted);">Full-stack portfolio projects on GitHub.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-12">
+                                <div class="glass metric-card fade-up delay-2">
+                                    <p class="metric-number gradient-text mb-1">5</p>
+                                    <p class="mb-0 fw-semibold">Certificates & Events</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-12">
+                                <div class="glass metric-card fade-up delay-3">
+                                    <p class="metric-number gradient-text mb-1">2026</p>
+                                    <p class="mb-0 fw-semibold">B.Tech Graduation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-space pt-0">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="gradient-text">Skills & Tools</h2>
+                    <p class="mx-auto" style="max-width: 760px; color: var(--muted);">
+                        Practical stack I use for full-stack development, testing, and delivery workflow.
                     </p>
-                    <p class="text-gray-400 leading-relaxed">
-                        My journey began with a curiosity for how technology solves real-world problems. Today, 
-                        I’m focused on learning advanced concepts in Spring Boot, REST APIs, and backend architecture, 
-                        aiming to create impactful solutions that reflect both creativity and precision in code.
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="glass skills-card fade-up h-100 w-100">
+                            <p class="skills-label">Core Development</p>
+                            <div class="skills-cluster">
+                                <span class="skills-pill">Java</span>
+                                <span class="skills-pill">JavaScript</span>
+                                <span class="skills-pill">SQL</span>
+                                <span class="skills-pill">REST APIs</span>
+                                <span class="skills-pill">OOP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="glass skills-card fade-up delay-1 h-100 w-100">
+                            <p class="skills-label">Frameworks</p>
+                            <div class="skills-cluster">
+                                <span class="skills-pill">Spring Boot</span>
+                                <span class="skills-pill">React</span>
+                                <span class="skills-pill">Spring Data JPA</span>
+                                <span class="skills-pill">Node.js</span>
+                                <span class="skills-pill">Express</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="glass skills-card fade-up delay-2 h-100 w-100">
+                            <p class="skills-label">Databases</p>
+                            <div class="skills-cluster">
+                                <span class="skills-pill">MySQL</span>
+                                <span class="skills-pill">MongoDB</span>
+                                <span class="skills-pill">Schema Design</span>
+                                <span class="skills-pill">Query Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="glass skills-card fade-up delay-3 h-100 w-100">
+                            <p class="skills-label">Tools & Workflow</p>
+                            <div class="skills-cluster">
+                                <span class="skills-pill">Git & GitHub</span>
+                                <span class="skills-pill">Postman</span>
+                                <span class="skills-pill">VS Code</span>
+                                <span class="skills-pill">Eclipse</span>
+                                <span class="skills-pill">Power BI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-space pt-0">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="gradient-text">Education Timeline</h2>
+                    <p class="mx-auto" style="max-width: 760px; color: var(--muted);">
+                        Academic milestones from SSC to B.Tech with percentage and current graduation profile.
                     </p>
-                    <div class="grid grid-cols-2 gap-4 pt-4">
-                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
-                            <div class="text-3xl font-bold text-aurora-green">10+</div>
-                            <div class="text-sm text-gray-400">Personal & Academic Projects</div>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
-                            <div class="text-3xl font-bold text-aurora-blue">2+</div>
-                            <div class="text-sm text-gray-400">Team Collaborations</div>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
-                            <div class="text-3xl font-bold text-aurora-purple">7+</div>
-                            <div class="text-sm text-gray-400"> Internships & Certifications</div>
-                        </div>
-                    </div>
                 </div>
-                <div class="relative">
-                    <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-aurora-green via-aurora-blue to-aurora-purple p-1">
-                        <div class="w-full h-full rounded-full bg-dark-bg flex items-center justify-center">
-                            <span class="text-6xl">👨‍💻</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Technical Skills</h2>
-            <div class="max-w-4xl mx-auto space-y-8">
-                <!-- Frontend Skills -->
-                 <div>
-                 <div class="flex justify-between mb-2">
-                 <span>Basic Frontend (HTML / CSS / React)</span>
-                 <span>50%</span>
-                </div>
-                 <div class="w-full bg-dark-card rounded-full h-2">
-               <div class="bg-gradient-to-r from-aurora-green to-aurora-blue h-2 rounded-full progress-bar" style="width: 50%"></div>
-               </div>
-              </div>
-                <!-- Backend Skills -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-aurora-blue">Backend Development</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span> JAVA </span>
-                                <span>80%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-green to-aurora-blue h-2 rounded-full progress-bar" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Spring Boot</span>
-                                <span>65%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-blue to-aurora-purple h-2 rounded-full progress-bar" style="width: 65%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span>Databases (MySQL / MongoDB)</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="w-full bg-dark-card rounded-full h-2">
-                                <div class="bg-gradient-to-r from-aurora-purple to-aurora-pink h-2 rounded-full progress-bar" style="width: 70%"></div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools & Others -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-aurora-purple">Tools & DevOps</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fab fa-docker text-2xl mb-2 text-aurora-green"></i>
-                            <p>Docker</p>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fab fa-aws text-2xl mb-2 text-aurora-blue"></i>
-                            <p>AWS</p>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fab fa-git text-2xl mb-2 text-aurora-purple"></i>
-                            <p>Git</p>
-                        </div>
-                        <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
-                            <i class="fas fa-infinity text-2xl mb-2 text-aurora-pink"></i>
-                            <p>CI/CD</p>
-                        </div>
+                <div class="glass timeline-wrap fade-up delay-1">
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <p class="timeline-year">2026</p>
+                            <h3 class="h5 mb-1">B.Tech in Computer Science & Engineering</h3>
+                            <p class="mb-1" style="color: var(--muted);">Sant Gadge Baba Amravati University</p>
+                            <p class="mb-0"><strong>CGPA:</strong> 6.2 / 10</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="timeline-year">2022</p>
+                            <h3 class="h5 mb-1">Class 12 (HSC - Science)</h3>
+                            <p class="mb-1" style="color: var(--muted);">Maharashtra State Board</p>
+                            <p class="mb-0"><strong>Percentage:</strong> 66.67%</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="timeline-year">2020</p>
+                            <h3 class="h5 mb-1">Class 10 (SSC)</h3>
+                            <p class="mb-1" style="color: var(--muted);">Maharashtra State Board</p>
+                            <p class="mb-0"><strong>Percentage:</strong> 84.40%</p>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Portfolio</h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
-                    <div class="h-48 bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center">
-                        <i class="fas fa-shopping-cart text-6xl text-dark-bg"></i>
+        <section id="events" class="section-space pt-0">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="gradient-text">Events & Community</h2>
+                    <p class="mx-auto" style="max-width: 760px; color: var(--muted);">
+                        Key technical community participation and learning takeaways from multi-day events.
+                    </p>
+                </div>
+
+                <div class="glass event-summary fade-up">
+                    <h3 class="h5 mb-2">DotNetConfAmravati / DotNet2025 / TechVibes</h3>
+                    <p class="mb-0" style="color: var(--muted);">
+                        Participated in a 3-day event organized at MLSC PRPCEM, hosted by P. R. Pote Patil College of Engineering & Management.
+                        Sessions covered Azure Data, Spring Boot, Data Science, OpenAI, Cloud Computing, .NET Core, and Azure DevOps with direct
+                        exposure to speaker insights on mentorship and developer-community growth.
+                    </p>
+                </div>
+
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-xl-4 d-flex">
+                        <article class="glass event-card fade-up h-100 w-100">
+                            <p class="event-day">Day 1 • Praffull Manekar</p>
+                            <h3 class="h5 mb-2">Trainer, Developer, Consultant Insights</h3>
+                            <ul class="event-list">
+                                <li>Azure Data</li>
+                                <li>Spring Boot</li>
+                                <li>Data Science</li>
+                                <li>OpenAI use cases</li>
+                            </ul>
+                        </article>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
-                        <p class="text-gray-400 mb-4">Full-stack e-commerce solution with payment integration</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-aurora-green/20 text-aurora-green rounded text-xs">React</span>
-                            <span class="px-2 py-1 bg-aurora-blue/20 text-aurora-blue rounded text-xs">Node.js</span>
-                            <span class="px-2 py-1 bg-aurora-purple/20 text-aurora-purple rounded text-xs">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
+                    <div class="col-md-6 col-xl-4 d-flex">
+                        <article class="glass event-card fade-up delay-1 h-100 w-100">
+                            <p class="event-day">Day 2 • Lakshit Pant</p>
+                            <h3 class="h5 mb-2">Product Management and Mentorship</h3>
+                            <ul class="event-list">
+                                <li>Azure Data direction</li>
+                                <li>AR specialist journey</li>
+                                <li>MVP+Gold MLSA program leadership</li>
+                                <li>Innovation with Azure developer community</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4 d-flex">
+                        <article class="glass event-card fade-up delay-2 h-100 w-100">
+                            <p class="event-day">Day 3 • Anuraj Parameswaran</p>
+                            <h3 class="h5 mb-2">Cloud and Engineering Leadership</h3>
+                            <ul class="event-list">
+                                <li>Microsoft Azure and Cloud Computing</li>
+                                <li>.NET Core ecosystem</li>
+                                <li>Azure DevOps Services</li>
+                                <li>Technology and community leadership</li>
+                            </ul>
+                        </article>
                     </div>
                 </div>
 
-                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
-                    <div class="h-48 bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center">
-                        <i class="fas fa-users text-6xl text-dark-bg"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Social Media Dashboard</h3>
-                        <p class="text-gray-400 mb-4">Analytics dashboard for social media management</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-aurora-green/20 text-aurora-green rounded text-xs">Vue.js</span>
-                            <span class="px-2 py-1 bg-aurora-blue/20 text-aurora-blue rounded text-xs">Python</span>
-                            <span class="px-2 py-1 bg-aurora-purple/20 text-aurora-purple rounded text-xs">PostgreSQL</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
-                    <div class="h-48 bg-gradient-to-br from-aurora-purple to-aurora-pink flex items-center justify-center">
-                        <i class="fas fa-gamepad text-6xl text-dark-bg"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Gaming Platform</h3>
-                        <p class="text-gray-400 mb-4">Real-time multiplayer gaming platform</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-aurora-green/20 text-aurora-green rounded text-xs">Next.js</span>
-                            <span class="px-2 py-1 bg-aurora-blue/20 text-aurora-blue rounded text-xs">Socket.io</span>
-                            <span class="px-2 py-1 bg-aurora-purple/20 text-aurora-purple rounded text-xs">Redis</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                            <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Learning  Section -->
-    <section id="blog" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Technical Learning </h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-aurora-green to-aurora-blue"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-400 mb-2">March 15, 2024</div>
-                        <h3 class="text-xl font-semibold mb-3">The Future of Web Development</h3>
-                        <p class="text-gray-400 mb-4">
-                            Exploring emerging trends and technologies shaping the future of web development...
-                        </p>
-                        <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                            Read More →
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-lg-4">
+                        <a class="event-media fade-up" target="_blank" rel="noopener" href="images/dotnet-event-speaker.jpg">
+                            <img src="images/dotnet-event-speaker.jpg" alt="Speaking at DotNetConfAmravati">
                         </a>
                     </div>
-                </article>
-
-                <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-aurora-blue to-aurora-purple"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-400 mb-2">March 10, 2024</div>
-                        <h3 class="text-xl font-semibold mb-3">Building Scalable Applications</h3>
-                        <p class="text-gray-400 mb-4">
-                            Best practices for building applications that scale efficiently with growing demand...
-                        </p>
-                        <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                            Read More →
+                    <div class="col-md-6 col-lg-4">
+                        <a class="event-media fade-up delay-1" target="_blank" rel="noopener" href="images/dotnet-event-networking.jpg">
+                            <img src="images/dotnet-event-networking.jpg" alt="Networking at DotNetConfAmravati">
                         </a>
                     </div>
-                </article>
-
-                <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-aurora-purple to-aurora-pink"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-400 mb-2">March 5, 2024</div>
-                        <h3 class="text-xl font-semibold mb-3">UI/UX Design Principles</h3>
-                        <p class="text-gray-400 mb-4">
-                            Essential design principles for creating user-friendly and aesthetic interfaces...
-                        </p>
-                        <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
-                            Read More →
+                    <div class="col-md-12 col-lg-4">
+                        <a class="event-media fade-up delay-2" target="_blank" rel="noopener" href="images/dotnet-conf-amravati-certificate.jpg">
+                            <img src="images/dotnet-conf-amravati-certificate.jpg" alt=".NET Conf Amravati participation certificate">
                         </a>
                     </div>
-                </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-dark-card/30">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center">
-                                <i class="fas fa-envelope text-dark-bg"></i>
+        <section id="certifications" class="section-space pt-0">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="gradient-text">Certifications</h2>
+                    <p class="mx-auto" style="max-width: 760px; color: var(--muted);">
+                        Professional certifications that support my software development, cloud, and security learning track.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-6 d-flex">
+                        <article class="glass cert-card fade-up delay-1 h-100 w-100">
+                            <p class="project-eyebrow">Java Internship</p>
+                            <h3 class="h5 mb-2">CodeSoft Java Programming Internship</h3>
+                            <p class="cert-issuer">CodeSoft</p>
+                            <p class="mb-2" style="color: var(--muted);">Hands-on work in Java coding, debugging, and optimization through guided tasks.</p>
+                            <p class="cert-proof">Original certificate attached.</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <a class="project-link-btn" target="_blank" rel="noopener" href="CodeSoft_Java_Internship_Certificate.pdf">View Proof</a>
+                                <a class="project-link-btn" href="mailto:pawankamble8078@gmail.com?subject=Request%20CodeSoft%20Java%20Internship%20Certificate">Request Original</a>
                             </div>
-                            <div>
-                                <p class="text-gray-400">Email</p>
-                                <p> pawankamble8078@gmail.com </p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-6 d-flex">
+                        <article class="glass cert-card fade-up delay-2 h-100 w-100">
+                            <p class="project-eyebrow">Cloud</p>
+                            <h3 class="h5 mb-2">AWS APAC - Solutions Architecture Job Simulation</h3>
+                            <p class="cert-issuer">Forage • Issued Nov 2023</p>
+                            <p class="mb-2" style="color: var(--muted);">Completed cloud architecture simulation focused on practical AWS solution design decisions.</p>
+                            <p class="cert-proof">Credential ID: p4hiKmXWFg27gJmxx</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <a class="project-link-btn" target="_blank" rel="noopener" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AWS/kkE9HyeNcw6rwCRGw_AWS%20APAC_5ZNvizetXJnafuHcA_1699859951961_completion_certificate.pdf">Show Credential</a>
                             </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-6 d-flex">
+                        <article class="glass cert-card fade-up delay-3 h-100 w-100">
+                            <p class="project-eyebrow">Cybersecurity Internship</p>
+                            <h3 class="h5 mb-2">Network Security Associate Virtual Internship</h3>
+                            <p class="cert-issuer">AICTE - EduSkills - Fortinet • Jan 2024 - Mar 2024</p>
+                            <p class="mb-2" style="color: var(--muted);">Successfully completed a 10-week virtual internship focused on network security fundamentals and practical security concepts.</p>
+                            <p class="cert-proof">Certificate ID: 2e4fddea2ec5a9bf6adc3308e9f6a2c7</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <a class="project-link-btn" target="_blank" rel="noopener" href="Network_Security_Associate_Virtual_Internship_2024.pdf">Show Credential</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-6 d-flex">
+                        <article class="glass cert-card fade-up delay-3 h-100 w-100">
+                            <p class="project-eyebrow">Cloud Fundamentals</p>
+                            <h3 class="h5 mb-2">Azure Fundamentals Challenge</h3>
+                            <p class="cert-issuer">Microsoft Learn Student Ambassador • Active Mar 6, 2024 to Mar 17, 2024</p>
+                            <p class="mb-2" style="color: var(--muted);">Completed the challenge to strengthen Azure fundamentals and cloud computing concepts through community learning.</p>
+                            <p class="cert-proof">Event hosted by Ashutosh Rana (Beta Microsoft Learn Student Ambassador).</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <a class="project-link-btn" target="_blank" rel="noopener" href="images/azure-fundamentals-challenge-certificate.jpg">View Certificate</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-space">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="gradient-text">Featured Projects</h2>
+                    <p class="mx-auto" style="max-width: 760px; color: var(--muted);">
+                        Project list below reflects my actual implementation work. Where open-source ideas were used,
+                        I mention customization clearly.
+                    </p>
+                </div>
+
+                <div class="project-filters fade-up delay-1" role="toolbar" aria-label="Project filters">
+                    <button type="button" class="project-filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="project-filter-btn" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+                    <button type="button" class="project-filter-btn" data-filter="java" aria-pressed="false">Java</button>
+                    <button type="button" class="project-filter-btn" data-filter="spring-boot" aria-pressed="false">Spring Boot</button>
+                    <button type="button" class="project-filter-btn" data-filter="react" aria-pressed="false">React</button>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 d-flex project-col">
+                        <article class="glass project-card fade-up h-100 w-100" data-tags="fullstack react nodejs express mongodb">
+                            <a target="_blank" rel="noopener" href="https://github.com/pawankamble04/Edunesta" class="project-thumb-wrap">
+                                <img src="images/edunesta-thumb.png" class="project-thumb project-thumb--right" alt="EduNesta preview">
+                            </a>
+                            <p class="project-eyebrow">Full Stack • Role Based • 2026</p>
+                            <h3 class="h5 mb-3">EduNesta - Smart Education Ecosystem</h3>
+                            <p style="color: var(--muted);">
+                                Role-based learning platform for teachers, students, and parents with tests,
+                                materials, lectures, and analytics.
+                            </p>
+                            <div class="project-stack" aria-label="EduNesta tech stack">
+                                <span class="project-chip">React</span>
+                                <span class="project-chip">Node.js</span>
+                                <span class="project-chip">Express</span>
+                                <span class="project-chip">MongoDB</span>
+                                <span class="project-chip">JWT</span>
+                            </div>
+                            <p class="mb-3"><strong>My work:</strong> integrated auth flow, test/submission APIs, role-specific dashboard behavior.</p>
+                            <div class="project-links">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a class="project-link-btn" target="_blank" rel="noopener" href="https://github.com/pawankamble04/Edunesta">View GitHub</a>
+                                    <button class="project-link-btn project-link-ghost" type="button" data-bs-toggle="modal" data-bs-target="#caseStudyEdunesta">Case Study</button>
+                                </div>
+                                <span class="project-link-muted">Live demo: In progress</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 d-flex project-col">
+                        <article class="glass project-card fade-up delay-1 h-100 w-100" data-tags="fullstack java spring-boot react mongodb">
+                            <a target="_blank" rel="noopener" href="https://github.com/pawankamble04/job-portal" class="project-thumb-wrap">
+                                <img src="images/job-portal-thumb.png" class="project-thumb" alt="Job Portal preview">
+                            </a>
+                            <p class="project-eyebrow">Full Stack • Employer/Employee • 2026</p>
+                            <h3 class="h5 mb-3">Job Portal Application</h3>
+                            <p style="color: var(--muted);">
+                                Full-stack job portal where employers post jobs and employees apply with role-based access.
+                            </p>
+                            <div class="project-stack" aria-label="Job Portal tech stack">
+                                <span class="project-chip">React</span>
+                                <span class="project-chip">Spring Boot</span>
+                                <span class="project-chip">MongoDB</span>
+                                <span class="project-chip">JWT</span>
+                                <span class="project-chip">Axios</span>
+                            </div>
+                            <p class="mb-3"><strong>My work:</strong> authentication, posting/apply workflow, employer applicant management.</p>
+                            <div class="project-links">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a class="project-link-btn" target="_blank" rel="noopener" href="https://github.com/pawankamble04/job-portal">View GitHub</a>
+                                    <button class="project-link-btn project-link-ghost" type="button" data-bs-toggle="modal" data-bs-target="#caseStudyJobPortal">Case Study</button>
+                                </div>
+                                <span class="project-link-muted">Live demo: In progress</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 d-flex project-col">
+                        <article class="glass project-card fade-up delay-2 h-100 w-100" data-tags="fullstack java spring-boot react mysql">
+                            <a target="_blank" rel="noopener" href="https://github.com/pawankamble04/EmployeeManagementSystem" class="project-thumb-wrap">
+                                <img src="images/employee-management-thumb.png" class="project-thumb" alt="Employee Management System preview">
+                            </a>
+                            <p class="project-eyebrow">CRUD System • REST APIs • 2026</p>
+                            <h3 class="h5 mb-3">Employee Management System</h3>
+                            <p style="color: var(--muted);">
+                                Employee CRUD management app with REST APIs and frontend integration for business data operations.
+                            </p>
+                            <div class="project-stack" aria-label="Employee Management tech stack">
+                                <span class="project-chip">Spring Boot</span>
+                                <span class="project-chip">React</span>
+                                <span class="project-chip">MySQL</span>
+                                <span class="project-chip">Spring Data JPA</span>
+                                <span class="project-chip">Bootstrap</span>
+                            </div>
+                            <p class="mb-3"><strong>My work:</strong> CRUD endpoints, exception handling, Axios integration, API testing with Postman.</p>
+                            <div class="project-links">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a class="project-link-btn" target="_blank" rel="noopener" href="https://github.com/pawankamble04/EmployeeManagementSystem">View GitHub</a>
+                                    <button class="project-link-btn project-link-ghost" type="button" data-bs-toggle="modal" data-bs-target="#caseStudyEmployeeManagement">Case Study</button>
+                                </div>
+                                <span class="project-link-muted">Live demo: In progress</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="glass p-3 mt-4 fade-up delay-3">
+                    <p class="mb-0" style="color: var(--muted);">
+                        Transparency note: some parts of these projects were adapted from open-source references during learning,
+                        then customized and extended by me with feature changes, bug fixes, and integration work.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hire" class="section-space pt-0">
+            <div class="container">
+                <div class="glass recruiter-cta fade-up">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-8">
+                            <p class="cta-badge">Available for Internship / Full-Time</p>
+                            <h2 class="mb-2">Ready to contribute as a Java Full Stack Developer</h2>
+                            <p class="mb-0" style="color: var(--muted);">
+                                Open to Java full-stack internship and entry-level opportunities.
+                                I can contribute to backend API development, database integration, and React-based frontend implementation.
+                            </p>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center">
-                                <i class="fas fa-phone text-dark-bg"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Phone</p>
-                                <p>+91 8432962696 </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-purple to-aurora-pink flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-dark-bg"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Location</p>
-                                <p>Amravati , Maharashtra </p>
+                        <div class="col-lg-4">
+                            <div class="cta-actions">
+                                <a class="btn btn-accent" href="mailto:pawankamble8078@gmail.com?subject=Interview%20Opportunity%20-%20Pawan%20Kamble">Email for Interview</a>
+                                <a class="btn btn-outline-custom" href="tel:+918432962696">Call: +91 8432962696</a>
+                                <a class="btn btn-outline-custom" target="_blank" rel="noopener" href="https://www.linkedin.com/in/pawan-kamble-b94415290/">View LinkedIn</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green">
-                        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green">
-                        <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green"></textarea>
-                        <button type="submit" class="w-full px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-lg text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
+        <section id="contact" class="section-space">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="glass contact-box fade-up">
+                            <h2 class="mb-2">Contact Me</h2>
+                            <p style="color: var(--muted);">
+                                Send a message directly from this form.
+                            </p>
+                            <form id="contactForm" class="mt-3" action="https://formspree.io/f/mgolpkdq" method="POST" novalidate>
+                                <input id="formSubject" type="hidden" name="_subject" value="Portfolio Contact Message">
+                                <div class="mb-3">
+                                    <label class="form-label" for="name">Name</label>
+                                    <input id="name" name="name" type="text" class="form-control" placeholder="Your name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input id="email" name="email" type="email" class="form-control" placeholder="your@email.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" class="form-control" placeholder="Write your message" required></textarea>
+                                </div>
+                                <button id="contactSubmit" type="submit" class="btn btn-accent px-4 py-2">Send Message</button>
+                                <p id="formStatus" class="form-status" aria-live="polite"></p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="glass contact-box h-100 fade-up delay-1">
+                            <h3 class="h5 mb-3">Direct Links</h3>
+                            <a class="contact-link" target="_blank" rel="noopener" href="https://github.com/pawankamble04">
+                                GitHub: @pawankamble04
+                            </a>
+                            <a class="contact-link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/pawan-kamble-b94415290/">
+                                LinkedIn Profile
+                            </a>
+                            <a class="contact-link" href="mailto:pawankamble8078@gmail.com">
+                                Email: pawankamble8078@gmail.com
+                            </a>
+                            <a class="contact-link" href="tel:+918432962696">
+                                Phone: +91 8432962696
+                            </a>
+                            <a class="contact-link" target="_blank" rel="noopener" href="https://pawankamble04.github.io/my-portfolio-site/">
+                                Previous Portfolio Version
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade case-modal" id="caseStudyEdunesta" tabindex="-1" aria-labelledby="caseStudyEdunestaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title h5" id="caseStudyEdunestaLabel">Case Study: EduNesta</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="color: var(--muted);"><strong>Problem:</strong> Teachers needed one platform to run online tests, share materials, and track student performance with parent visibility.</p>
+                    <p style="color: var(--muted);"><strong>Solution:</strong> Built a role-based education ecosystem with separate flows for teacher, student, parent, and admin users.</p>
+                    <p class="mb-2"><strong>Key Features Implemented</strong></p>
+                    <ul class="case-list">
+                        <li>JWT authentication with role-based access control.</li>
+                        <li>MCQ test creation, attempt, and result evaluation flow.</li>
+                        <li>Material and lecture management with dashboard-based access.</li>
+                        <li>Parent visibility features for student performance tracking.</li>
+                    </ul>
+                    <p class="mt-3 mb-2"><strong>Outcome</strong></p>
+                    <p style="color: var(--muted);" class="mb-0">Project demonstrates end-to-end product thinking, multi-role architecture, and scalable backend API design.</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="project-link-btn" target="_blank" rel="noopener" href="https://github.com/pawankamble04/Edunesta">Open Repository</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-dark-border">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-4">
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-green transition"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-blue transition"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-purple transition"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-2xl mx-2 hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
+    <div class="modal fade case-modal" id="caseStudyJobPortal" tabindex="-1" aria-labelledby="caseStudyJobPortalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title h5" id="caseStudyJobPortalLabel">Case Study: Job Portal Application</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="color: var(--muted);"><strong>Problem:</strong> Needed a platform for employer and employee workflows with secure auth and reliable job-application tracking.</p>
+                    <p style="color: var(--muted);"><strong>Solution:</strong> Built a full-stack job portal with separated role journeys and protected operations.</p>
+                    <p class="mb-2"><strong>Key Features Implemented</strong></p>
+                    <ul class="case-list">
+                        <li>Employer and employee sign-up/sign-in using JWT auth.</li>
+                        <li>Employer job posting flow and applicant management dashboard.</li>
+                        <li>Employee job feed, search, and application workflow.</li>
+                        <li>Role-protected routes and backend API validation.</li>
+                    </ul>
+                    <p class="mt-3 mb-2"><strong>Outcome</strong></p>
+                    <p style="color: var(--muted);" class="mb-0">Project validates practical implementation of role-based business logic and multi-user interaction flow.</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="project-link-btn" target="_blank" rel="noopener" href="https://github.com/pawankamble04/job-portal">Open Repository</a>
+                </div>
             </div>
-            <p class="text-gray-400">
-                Pawan Kamble | Java Developer 
-                <a href="https://github.com/OSSPhilippines/freefolio" class="text-aurora-green hover:text-aurora-blue transition">
-                    Portfolio
-                </a>
-            </p>
+        </div>
+    </div>
+
+    <div class="modal fade case-modal" id="caseStudyEmployeeManagement" tabindex="-1" aria-labelledby="caseStudyEmployeeManagementLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title h5" id="caseStudyEmployeeManagementLabel">Case Study: Employee Management System</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="color: var(--muted);"><strong>Problem:</strong> Manage employee records with clean CRUD APIs and frontend integration suitable for real business scenarios.</p>
+                    <p style="color: var(--muted);"><strong>Solution:</strong> Developed Spring Boot + React application with layered backend architecture and MySQL persistence.</p>
+                    <p class="mb-2"><strong>Key Features Implemented</strong></p>
+                    <ul class="case-list">
+                        <li>CRUD APIs for employee create, read, update, and delete.</li>
+                        <li>Exception handling and clear response patterns.</li>
+                        <li>Axios-based integration between React frontend and APIs.</li>
+                        <li>Postman-tested endpoints for functional verification.</li>
+                    </ul>
+                    <p class="mt-3 mb-2"><strong>Outcome</strong></p>
+                    <p style="color: var(--muted);" class="mb-0">Project showcases backend fundamentals, API design clarity, and full-stack integration readiness.</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="project-link-btn" target="_blank" rel="noopener" href="https://github.com/pawankamble04/EmployeeManagementSystem">Open Repository</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4">
+        <div class="container text-center">
+            <small>&copy; 2026 Pawan Kamble. All rights reserved.</small>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+        (function () {
+            const form = document.getElementById("contactForm");
+            const submitButton = document.getElementById("contactSubmit");
+            const statusEl = document.getElementById("formStatus");
+            const subjectField = document.getElementById("formSubject");
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileMenu').classList.add('hidden');
-            });
-        });
+            if (!form) return;
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+            const FORMSPREE_ENDPOINT = "https://formspree.io/f/mgolpkdq";
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-slide-up');
+            function setStatus(message, state) {
+                if (!statusEl) return;
+                statusEl.textContent = message;
+                if (state) {
+                    statusEl.setAttribute("data-state", state);
+                } else {
+                    statusEl.removeAttribute("data-state");
                 }
-            });
-        }, observerOptions);
+            }
 
-        // Observe sections for animation
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
+            async function submitToFormspree(payload) {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                if (!response.ok) {
+                    throw new Error("Formspree request failed");
+                }
+            }
+
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+
+                submitButton.disabled = true;
+                setStatus("Sending message...", "loading");
+
+                try {
+                    await submitToFormspree({
+                        name: name,
+                        email: email,
+                        message: message,
+                        _subject: "Portfolio Contact from " + name
                     });
+                    form.reset();
+                    setStatus("Message sent successfully.", "success");
+                } catch (error) {
+                    console.error(error);
+                    if (subjectField) {
+                        subjectField.value = "Portfolio Contact from " + name;
+                    }
+                    setStatus("Background submit failed. Redirecting to direct Formspree submit...", "warning");
+                    form.submit();
+                } finally {
+                    submitButton.disabled = false;
                 }
             });
-        });
+        })();
+
+        (function () {
+            const filterButtons = Array.from(document.querySelectorAll(".project-filter-btn"));
+            const projectCards = Array.from(document.querySelectorAll(".project-card[data-tags]"));
+
+            if (!filterButtons.length || !projectCards.length) return;
+
+            function applyFilter(tag) {
+                projectCards.forEach(function (card) {
+                    const tags = (card.getAttribute("data-tags") || "").split(/\s+/);
+                    const shouldShow = tag === "all" || tags.includes(tag);
+                    const wrapper = card.closest(".project-col");
+                    if (wrapper) {
+                        wrapper.style.display = shouldShow ? "" : "none";
+                    }
+                });
+            }
+
+            filterButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const tag = button.getAttribute("data-filter") || "all";
+
+                    filterButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                        btn.setAttribute("aria-pressed", "false");
+                    });
+
+                    button.classList.add("active");
+                    button.setAttribute("aria-pressed", "true");
+                    applyFilter(tag);
+                });
+            });
+
+            applyFilter("all");
+        })();
     </script>
 </body>
 </html>
+
